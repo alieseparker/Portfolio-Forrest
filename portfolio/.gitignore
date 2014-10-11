@@ -19,4 +19,7 @@
 .DS_Store
 
 # Ignore vendor/bundle
-vendor/bundle/**/*
+/vendor/bundle/**/*
+
+# Ignore bin
+/bin/**/*
