@@ -1,0 +1,9 @@
+project_1:
+  id: 1
+  name: How meta
+  technologies_used: "Ruby, Rails, Zurb"
+
+project_2:
+  id: 2
+  name: Barnyard Cereal
+  technologies_used: "Ruby, Rails, Farmville API, Automilker"
