@@ -23,3 +23,6 @@
 
 # Ignore bin
 /bin/**/*
+
+# Ignore secrets
+/config/secrets.yml
