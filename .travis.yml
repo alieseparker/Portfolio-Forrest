@@ -1,0 +1,4 @@
+deploy:
+  provider: heroku
+  app: my-chill-app # optional if it's the same as your repo name
+  api_key: "YOUR API TOKEN"
