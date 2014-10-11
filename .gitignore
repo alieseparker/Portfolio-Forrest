@@ -21,8 +21,5 @@
 # Ignore vendor/bundle
 /vendor/bundle/**/*
 
-# Ignore bin
-/bin/**/*
-
 # Ignore secrets
 /config/secrets.yml.env
