@@ -1,0 +1,15 @@
+Documentation:
+  Enabled: false
+Style/ClassAndModuleChildren:
+  EnforcedStyle: compact
+
+AllCops:
+  Include:
+    - '**/Rakefile'
+    - '**/config.ru'
+  Exclude:
+    - 'bin/**/*'
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'script/**/*'
+    - 'vendor/**/*'
