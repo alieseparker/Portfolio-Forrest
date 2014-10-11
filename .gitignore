@@ -25,4 +25,4 @@
 /bin/**/*
 
 # Ignore secrets
-/config/secrets.yml.env
+/config/secrets.yml
