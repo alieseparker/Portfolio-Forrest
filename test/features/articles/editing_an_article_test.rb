@@ -2,6 +2,7 @@ require 'test_helper'
 
 feature 'Editing an Article' do
   scenario 'submit updates to an existing article' do
+    sign_in
     article = Article.create(title: 'Becoming a Code Fellow',
                              body: 'Means striving for excellence.')
     visit article_path(article)
