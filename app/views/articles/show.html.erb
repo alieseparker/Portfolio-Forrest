@@ -12,8 +12,13 @@
 
 <p id="author">
   <b>By:</b>
-  <%= @article.author_id %>
+  <%= @article.author.email %>
+</p>
+
+<p id="status">
+  <b>Status:</b>
+  <%= @article.published? ? "Published" : "Unpublished" %>
 </p>
 
 <%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
+<%= link_to 'Back', article_path %>

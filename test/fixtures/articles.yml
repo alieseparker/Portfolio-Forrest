@@ -1,7 +1,11 @@
 article_1:
   title: Code Rails
   body: This is how I learned web development!
+  author: Peach
+  published: true
 
 article_2:
   title: Intro to HTTP
   body: It's all about the request-response cycle!
+  author: Daisy
+  published: true

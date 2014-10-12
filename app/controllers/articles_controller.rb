@@ -2,6 +2,7 @@ class ArticlesController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
   before_action :set_article, only: [:show, :edit, :update, :destroy]
 
+  rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
   # GET /articles
   # GET /articles.json
   def index
@@ -20,6 +21,7 @@ class ArticlesController < ApplicationController
 
   # GET /articles/1/edit
   def edit
+    authorize @article
   end
 
   # POST /articles
@@ -37,6 +39,7 @@ class ArticlesController < ApplicationController
   # PATCH/PUT /articles/1
   # PATCH/PUT /articles/1.json
   def update
+    authorize @article
     if @article.update(article_params)
       redirect_to @article, notice: 'Article was successfully updated.'
     else
@@ -47,6 +50,7 @@ class ArticlesController < ApplicationController
   # DELETE /articles/1
   # DELETE /articles/1.json
   def destroy
+    authorize @article
     @article.destroy
     redirect_to articles_url, notice: 'Article was successfully destroyed.'
   end
@@ -58,6 +62,12 @@ class ArticlesController < ApplicationController
   end
 
   def article_params
-    params.require(:article).permit(:title, :body)
+    params.require(:article).permit(
+                   :title, :body, (:published if current_user.role == 'editor'))
+  end
+
+  def user_not_authorized
+    flash[:notice] = 'You are not authorized to perform this action.'
+    redirect_to(request.referrer || root_path)
   end
 end
