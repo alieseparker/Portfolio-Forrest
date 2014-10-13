@@ -1,15 +1,83 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Portfolio</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <p>Welcome</p>
+   <div class="row">
+    <div class="large-4 columns">
+      <h1>Forrest Parker</h1>
+      <h2>Web Developer</h2>
+    </div>
+    <div class="large-8 columns">
+      <ul class="right button-group">
+      <li><a href="https://github.com/fparker9676/" class="button"><img src="images/webicon-github.png"/></a></li>
+      <li><a href="https://linkedin.com/in/forrestaparker" class="button"><img src="images/webicon-linkedin.png"/></a></li>
+      <li><a href="#" class="button"><img src="images/webicon-aboutme.png"/></a></li>
+      </ul>
+     </div>
+   </div>
 
-<%= yield %>
+  <div class="row">
+    <h4>Showcase</h4>
+    <div class="large-4 columns">
+      <img src="http://placehold.it/400x300&text=[img]"/>
+      <h4>Project Title</h4>
+      <h5>Technologies used</h5>
+      <p>
+        Dessert soufflé applicake. Liquorice powder pudding. Marzipan liquorice pastry tootsie roll sugar plum. Sweet roll cake oat cake bonbon cookie macaroon caramels brownie jelly beans. Pudding donut croissant. Candy unerdwear.com unerdwear.com cookie candy tootsie roll fruitcake marzipan bonbon. Danish dessert caramels. Tiramisu halvah croissant bonbon pie liquorice sesame snaps ice cream pastry.
+      </p>
+    </div>
 
-</body>
+    <div class="large-4 columns">
+      <img src="http://placehold.it/400x300&text=[img]"/>
+      <h4>Project Title</h4>
+      <h5>Technologies Used</h5>
+      <p>Muffin jelly donut. Topping liquorice sweet jelly beans. Powder pie candy. Brownie jelly topping sweet topping muffin. Applicake bear claw candy canes jelly beans soufflé. Tart powder dragée. Bear claw lollipop apple pie cupcake gummies lollipop.</p>
+    </div>
+
+    <div class="large-4 columns">
+      <img src="http://placehold.it/400x300&text=[img]"/>
+      <h4>Project Title</h4>
+      <h5>Technologies Used</h5>
+      <p>Cupcake ipsum dolor. Sit amet unerdwear.com. Gingerbread macaroon chocolate bar apple pie caramels apple pie marshmallow. Sesame snaps I love topping biscuit halvah. Biscuit muffin chocolate bar macaroon tart cupcake fruitcake. Bonbon gummies donut I love cotton candy sweet roll powder cheesecake lemon drops.</p>
+    </div>
+
+    </div>
+
+
+<div class="row">
+    <div class="large-12 columns">
+
+      <div class="panel">
+        <h4>Get in touch!</h4>
+
+        <div class="row">
+          <div class="large-3 columns">
+            <a href="#" class="radius button right">Contact Me</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <footer class="row">
+    <div class="large-12 columns">
+      <hr/>
+      <div class="row">
+          <ul class="inline-list right">
+            <li><a href="projects#index">Projects</a></li>
+            <li><a href="articles#index">Articles</a></li>
+            <li><a href="#">Some other link</a></li>
+          </ul>
+      </div>
+    </div>
+  </footer>
+
+  <%= yield %>
 </html>
