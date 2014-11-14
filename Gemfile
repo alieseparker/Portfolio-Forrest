@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-gem "launchy"
 gem "letter_opener"
 gem 'coffee-rails', '~> 4.0.0'
 gem 'devise'
@@ -16,6 +15,7 @@ gem 'sinatra', '>= 1.3.0', :require => nil
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
+gem 'jquery-turbolinks'
 
 group :development do
   # gem 'spring'

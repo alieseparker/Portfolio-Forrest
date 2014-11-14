@@ -1,7 +1,11 @@
 Forrest Parker
 
-=====Portfolio=====
+# Portfolio
 
-This is a site for my portfolio and learning rails!
+- This is a site for my portfolio and learning rails!
 
-=====Sources=====
+- Ajaxify my projecects resource.
+
+## Sources
+Clare Constantine
+http://railscasts.com/episodes/136-jquery-ajax-revised

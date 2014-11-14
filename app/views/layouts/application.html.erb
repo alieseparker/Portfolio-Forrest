@@ -7,15 +7,9 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
     <%# Modernizr is required for Zurb Foundation %>
     <%= javascript_include_tag 'vendor/modernizr' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <% flash.each do |key, value| %>
-      <div class="alert-box round <%= flash_class(key) %>">
-        <%= value %>
-      </div>
-    <% end %>
     <header>
       <%= render 'layouts/navigation' %>
     </header>
@@ -27,4 +21,5 @@
 
     </footer>
   </body>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 </html>

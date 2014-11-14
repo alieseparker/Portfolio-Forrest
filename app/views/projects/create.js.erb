@@ -1,0 +1,9 @@
+var ready = function () {
+  $('#new_project').remove();
+  $('#new-link').show();
+  $('#projects-section').append('<%= j render(@project) %>');
+};
+
+$(document).ready(ready);
+$(document).on('page:load', ready);
+

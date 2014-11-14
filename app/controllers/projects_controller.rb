@@ -7,6 +7,7 @@ class ProjectsController < ApplicationController
 
   def new
     @project = Project.new
+    @remote_value = true
   end
 
   def create
@@ -24,6 +25,7 @@ class ProjectsController < ApplicationController
   end
 
   def edit
+    @remote_value = false
   end
 
   def update
@@ -36,7 +38,7 @@ class ProjectsController < ApplicationController
 
   def destroy
     @project.destroy
-    redirect_to @project, notice: 'Project was successfully deleted.'
+    redirect_to projects_path, notice: 'Project was successfully deleted.'
   end
 
   private
